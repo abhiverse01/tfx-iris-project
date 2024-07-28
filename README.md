@@ -4,6 +4,7 @@ This project demonstrates how to create a TensorFlow Extended (TFX) pipeline usi
 
 ## Project Structure
 
+```bash
 tfx_iris_project/
 │
 ├── data/
@@ -27,7 +28,7 @@ tfx_iris_project/
 │ └── run_pipeline.py
 │
 └── README.md
-
+```
 
 ## Instructions
 
