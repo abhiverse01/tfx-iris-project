@@ -3,7 +3,7 @@
 import os
 from tfx.components import CsvExampleGen, StatisticsGen, SchemaGen, ExampleValidator, Transform, Trainer, Evaluator, Pusher
 from tfx.orchestration import pipeline
-from tfx.orchestration.local import local_dag_runner
+from tfx.orchestration.local import LocalDagRunner
 from tfx.orchestration.metadata import sqlite_metadata_connection_config
 from tfx.proto import example_gen_pb2, trainer_pb2, eval_config_pb2, pusher_pb2
 
@@ -89,4 +89,4 @@ def create_pipeline():
     )
 
 if __name__ == '__main__':
-    local_dag_runner.LocalDagRunner().run(create_pipeline())
+    LocalDagRunner().run(create_pipeline())
