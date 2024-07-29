@@ -1,3 +1,5 @@
+"""TFX pipeline definition for the Iris dataset."""
+
 import os
 from tfx.components import CsvExampleGen, StatisticsGen, SchemaGen, ExampleValidator, Transform, Trainer, Evaluator, Pusher
 from tfx.orchestration import pipeline
@@ -6,6 +8,7 @@ from tfx.orchestration.metadata import sqlite_metadata_connection_config
 from tfx.proto import example_gen_pb2, trainer_pb2, eval_config_pb2, pusher_pb2
 
 def create_pipeline():
+    """Creates and returns a TFX pipeline."""
     data_root = os.path.join(os.getcwd(), 'data')
 
     input_config = example_gen_pb2.Input(splits=[
@@ -22,6 +25,7 @@ def create_pipeline():
     )
 
     def preprocessing_fn(inputs):
+        """TFX preprocessing function."""
         import tensorflow_transform as tft
         outputs = {}
         outputs['sepal_length'] = tft.scale_to_z_score(inputs['sepal_length'])
