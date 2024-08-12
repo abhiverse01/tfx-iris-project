@@ -1,0 +1,80 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.log
+
+# Virtual environment
+tfx_env/
+venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# TFRecords
+*.tfrecords
+
+# TFX specific
+tfx_pipeline_output/
+metadata/
+
+# Caches
+*.cache
+*.h5
+*.ckpt
+*.ckpt.index
+*.pbtxt
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker specific
+*.env
+Dockerfile
+docker-compose.yml
+
+# Kubernetes specific
+*.yaml
+*.yml
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Config files
+config.yaml
+config.json
+
+# PyTest
+.pytest_cache/
+
+# Coverages
+.coverage
+htmlcov/
+
+# Secrets
+*.env
+.env.local
+.env.*
+
+# Data folder
+data/
